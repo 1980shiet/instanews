@@ -1,0 +1,9 @@
+// TODO
+// Add mixin for tablet media query
+
+$desktop-width: 1000px;
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
