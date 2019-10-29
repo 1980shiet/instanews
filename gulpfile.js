@@ -44,6 +44,9 @@ gulp.task("say_hello", function(done) {
   done();
 });
 
+/**
+ * Browser Sync
+ */
 gulp.task("browser-sync", function() {
   browserSync.init({
     server: {
@@ -61,4 +64,4 @@ gulp.task("watch", function() {
   gulp.watch("sass/*.scss", gulp.series("sass"));
 });
 
-gulp.task("default", gulp.parallel("browser-sync", "scripts"));
+gulp.task("default", gulp.parallel("browser-sync", "watch"));

@@ -1,4 +1,78 @@
+$text-color: #ffffff;
+$text-size: 16px;
+html {
+  font-size: 10px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 body {
-  background: black;
-  color: white;
+  font-family: "Open Sans Lightitalic";
+  color: #ffffff;
+  background-color: black;
+}
+
+.nyt-header {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 75px;
+  align-content: center;
+  &.is-active {
+    flex-direction: row;
+    align-items: center;
+    .logo {
+      max-width: 100px;
+    }
+    .nyt-forms {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.container {
+  max-width: 1000px;
+  margin: 25px;
+  display: flex;
+}
+
+.container small {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.nyt-forms {
+  text-align: center;
+  min-height: 175px;
+}
+
+.nyt-articles {
+  justify-content: center;
+}
+
+h1 {
+  font-size: 14px;
+}
+
+footer {
+  color: #c2c2c2;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.footerbottom {
+  display: flex;
+}
+
+@media (min-width: 600px) {
+}
+
+@media (min-width: 1000px) {
 }

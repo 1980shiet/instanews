@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Instanews Project</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
     <link rel="stylesheet" href="css/reset.css" />
 
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="./build/css/style.min.css" />
   </head>
   <body>
-    <header class="site-header">        
+    <header class="nyt-header">
       <div class="container">
-        <img src="images/nyt-logo.svg" alt="nytlogo" >
+        <img class="logo" src="images/nyt-logo.svg" alt="nytlogo" />
       </div>
-    </header> 
       <div class="nyt-forms">
         <h1>Choose a section:</h1>
-        <select name ="Sections" id="Sections">
-          <option value="Sections">--Sections--</option>
+        <select name="sections" id="sections">
+          <option value="sections">--Sections--</option>
           <option value="home">Home</option>
           <option value="arts">Arts</option>
           <option value="business">Busisness</option>
@@ -28,20 +30,23 @@
           <option value="technology">Technology</option>
           <option value="fashion">Fashion</option>
         </select>
-      </div> 
+      </div>
+    </header>
+
+    <section class="nyt-articles" id="nyt-articles"></section>
+
     <footer>
-  <section class="footerbottom">
       <div class="footercopyright">
-              <p>&copy; Copyright 2019 INSTANEWS </p>
+        <p>&copy; Copyright 2019 INSTANEWS</p>
       </div>
     </footer>
 
     <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
 
-    <script src="./build/js/script.min.js"></script>
+    <script src="build/js/script.min.js"></script>
   </body>
-
 </html>

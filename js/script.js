@@ -1,12 +1,39 @@
 document.addEventListener("DOMContentLoaded", function() {
-  $("button").on("click", function() {
+  $("#sections").on("change", function() {
+    const selectedVal = $(this).val();
+
+    // addClass to header
+    $(".nyt-header").addClass("is-active");
+
     $.ajax({
       method: "GET",
       url:
-        "https://api.nytimes.com/svc/topstories/v2/science.json?api-key=jMZDRIKLvAzaQaCw7PInVIccW1LfaMYp",
+        "https://api.nytimes.com/svc/topstories/v2/" +
+        selectedVal +
+        ".json?api-key=jMZDRIKLvAzaQaCw7PInVIccW1LfaMYp",
       dataType: "json"
-    }).done(function(data) {
-      console.log(data);
-    });
+    })
+      .done(function(data) {
+        //console.log("data object", data);
+        //console.log(data.last_updated);
+
+        // console.log(data);
+        // TODO try working with the data from the NYT API
+        const results = data.results;
+
+        results.forEach(function(article) {
+          console.log(article);
+          console.log(article.title);
+          // based on the code on line 22, try to console.log other object properties
+          // e.g. try to get the url, title, multimedia?
+          console.log(article.url[0]);
+        });
+
+        // console.log(results);
+        // try working with results to loop and append content to the DOM
+      })
+      .fail(function(err) {
+        //console.log(err);
+      });
   });
 });
