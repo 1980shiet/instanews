@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
+  const nytArticlesElem = $("#nyt-articles");
+
   $("#sections").on("change", function() {
     const selectedVal = $(this).val();
 
@@ -21,13 +23,23 @@ document.addEventListener("DOMContentLoaded", function() {
         // TODO try working with the data from the NYT API
         const results = data.results;
 
-        results.forEach(function(article) {
-          console.log(article);
-          console.log(article.title);
-          // based on the code on line 22, try to console.log other object properties
-          // e.g. try to get the url, title, multimedia?
-          console.log(article.url[0]);
+        console.log(results);
+
+        $.each(results, function(index, articleObject) {
+          nytArticlesElem.append(`
+          <article class="news-article" style="background: url(${articleObject.multimedia[4].url}); background-size: cover;">
+            <p>${articleObject.abstract}</p>
+          </article>
+        `);
         });
+
+        // results.forEach(function(article) {
+        //   console.log(article);
+        //   console.log(article.title);
+        //   // based on the code on line 22, try to console.log other object properties
+        //   // e.g. try to get the url, title, multimedia?
+        //   console.log(article.url[0]);
+        // });
 
         // console.log(results);
         // try working with results to loop and append content to the DOM
