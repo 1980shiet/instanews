@@ -1,5 +1,5 @@
 $text-color: #ffffff;
-$text-size: 16px;
+$font-size: 16px;
 html {
   font-size: 10px;
 }
@@ -23,7 +23,7 @@ body {
   margin: 75px;
   align-content: center;
   &.is-active {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     .logo {
       max-width: 100px;
@@ -32,14 +32,15 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
     }
   }
 }
 
 .container {
   max-width: 1000px;
-  margin: 25px;
   display: flex;
+  margin: 10px;
 }
 
 .container small {
@@ -49,7 +50,6 @@ body {
 
 .nyt-forms {
   text-align: center;
-  min-height: 175px;
 }
 
 .nyt-articles {
@@ -57,7 +57,10 @@ body {
 }
 
 .news-article {
-  height: 300px;
+  height: 400px;
+  .p {
+    font-size: 16px;
+  }
 }
 
 h1 {
