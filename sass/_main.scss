@@ -27,6 +27,7 @@ body {
   &.is-active {
     flex-direction: column;
     align-items: center;
+    margin: 0;
     .logo {
       max-width: 100px;
     }
@@ -37,6 +38,15 @@ body {
       flex-direction: column;
     }
   }
+}
+
+.ajax-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  display: none;
 }
 
 .container {
@@ -54,6 +64,7 @@ body {
 
 .nyt-forms {
   text-align: center;
+  height: 175px;
 }
 
 .nyt-articles {
@@ -65,9 +76,7 @@ body {
 .news-article {
   height: 400px;
   background-position: 70%;
-  //display: grid;
   position: relative;
-  //grid-template-columns: 1fr, 1fr, 1fr;
   p {
     position: absolute;
     bottom: 0;
@@ -87,10 +96,9 @@ footer {
   display: flex;
   justify-content: center;
   padding: 15px;
-}
-
-.footerbottom {
-  display: flex;
+  .footerbottom {
+    display: flex;
+  }
 }
 
 @media (min-width: 600px) {

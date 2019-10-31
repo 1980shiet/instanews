@@ -26,7 +26,8 @@ body {
     -webkit-box-direction: normal;
             flex-direction: column;
     -webkit-box-align: center;
-            align-items: center; }
+            align-items: center;
+    margin: 0; }
     .nyt-header.is-active .logo {
       max-width: 100px; }
     .nyt-header.is-active .nyt-forms {
@@ -39,6 +40,15 @@ body {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
               flex-direction: column; }
+
+.ajax-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100px;
+  display: none; }
 
 .container {
   max-width: 1000px;
@@ -53,7 +63,8 @@ body {
   margin: 10px; }
 
 .nyt-forms {
-  text-align: center; }
+  text-align: center;
+  height: 175px; }
 
 .nyt-articles {
   -webkit-box-pack: center;
@@ -83,7 +94,6 @@ footer {
   -webkit-box-pack: center;
           justify-content: center;
   padding: 15px; }
-
-.footerbottom {
-  display: -webkit-box;
-  display: flex; }
+  footer .footerbottom {
+    display: -webkit-box;
+    display: flex; }

@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // addClass to header
     $(".nyt-header").addClass("is-active");
+    $(".ajax-loader").show();
 
     $.ajax({
       method: "GET",
@@ -55,6 +56,9 @@ document.addEventListener("DOMContentLoaded", function() {
       })
       .fail(function(err) {
         //console.log(err);
+      })
+      .always(function() {
+        $(".ajax-loader").hide();
       });
   });
 });
