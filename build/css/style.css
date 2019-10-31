@@ -44,7 +44,8 @@ body {
   display: -webkit-box;
   display: flex;
   margin: 10px;
-  height: 100%; }
+  -webkit-box-pack: center;
+          justify-content: center; }
 
 .container small {
   max-width: 600px;
@@ -55,19 +56,22 @@ body {
 
 .nyt-articles {
   -webkit-box-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
 
 .news-article {
   height: 400px;
+  background-position: 70%;
   position: relative; }
   .news-article p {
     position: absolute;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    background-size: 20%; }
+    background-color: rgba(0, 0, 0, 0.4); }
 
 h2 {
-  font-size: 14px; }
+  font-family: "Open Sans,sans-serif";
+  font-size: 16px; }
 
 footer {
   color: #c2c2c2;
@@ -75,7 +79,8 @@ footer {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  padding: 15px; }
 
 .footerbottom {
   display: -webkit-box;

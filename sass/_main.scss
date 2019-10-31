@@ -1,5 +1,6 @@
 $text-color: #ffffff;
 $font-size: 16px;
+$font-family: "Open Sans,sans-serif";
 html {
   font-size: 16px;
 }
@@ -41,7 +42,8 @@ body {
   max-width: 1000px;
   display: flex;
   margin: 10px;
-  height: 100%;
+  justify-content: center;
+  // height: 100%;
 }
 
 .container small {
@@ -55,25 +57,26 @@ body {
 
 .nyt-articles {
   justify-content: center;
-  //display: grid;
-  //grid-template-rows: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .news-article {
   height: 400px;
+  background-position: 70%;
   //display: grid;
   position: relative;
   //grid-template-columns: 1fr, 1fr, 1fr;
   p {
     position: absolute;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    background-size: 20%;
+    background-color: rgba(0, 0, 0, 0.4);
   }
 }
 
 h2 {
-  font-size: 14px;
+  font-family: $font-family;
+  font-size: $font-size;
 }
 
 footer {
@@ -81,6 +84,7 @@ footer {
   font-size: 14px;
   display: flex;
   justify-content: center;
+  padding: 15px;
 }
 
 .footerbottom {
