@@ -9,7 +9,8 @@ html {
 body {
   font-family: "Open Sans,sans-serif";
   color: #ffffff;
-  background-color: black; }
+  background-color: black;
+  line-height: 1.5; }
 
 .nyt-header {
   display: -webkit-box;
@@ -67,6 +68,7 @@ body {
   .news-article p {
     position: absolute;
     bottom: 0;
+    padding: 10px;
     background-color: rgba(0, 0, 0, 0.4); }
 
 h2 {

@@ -23,9 +23,18 @@ document.addEventListener("DOMContentLoaded", function() {
         // TODO try working with the data from the NYT API
         const results = data.results;
 
-        console.log(results);
+        const filteredResults = results
+          .filter(function(articleItem) {
+            return articleItem.multimedia[4] !== undefined;
+          })
+          .slice(0, 12);
 
-        $.each(results, function(index, articleObject) {
+        console.log(filteredResults);
+
+        $(".nyt-articles").html("");
+        // console.log(results);
+
+        $.each(filteredResults, function(index, articleObject) {
           nytArticlesElem.append(`
           <article class="news-article" style="background: url(${articleObject.multimedia[4].url}); background-size: cover;">
             <p>${articleObject.abstract}</p>
