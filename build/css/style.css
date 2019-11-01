@@ -1,6 +1,3 @@
-html {
-  font-size: 14px; }
-
 *,
 *:before,
 *:after {
@@ -28,7 +25,8 @@ body {
   min-height: 90vh;
   -webkit-box-pack: center;
           justify-content: center;
-  align-content: center; }
+  -webkit-box-align: center;
+          align-items: center; }
   .nyt-header.is-active {
     min-height: 20vh;
     -webkit-box-orient: vertical;
@@ -49,11 +47,36 @@ body {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
               flex-direction: column;
-      height: 80px; }
+      text-align: center; }
+  @media (min-width: 600px) {
+    .nyt-header {
+      -webkit-box-pack: center;
+              justify-content: center;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row;
+      padding-top: 20px; }
+      .nyt-header .logo {
+        max-width: 120px; }
+      .nyt-header.is-active {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+                flex-direction: row; }
+        .nyt-header.is-active .logo {
+          max-width: 65px; } }
+  @media (min-width: 1000px) {
+    .nyt-header {
+      -webkit-box-pack: start;
+              justify-content: flex-start;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row; }
+      .nyt-header .logo {
+        max-width: 400px; } }
 
 .ajax-loader {
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -73,16 +96,18 @@ body {
   max-width: 600px;
   margin: 10px; }
 
-.nyt-forms {
-  text-align: center;
-  height: 175px; }
-
 .nyt-articles {
   -webkit-box-pack: center;
           justify-content: center;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   background-position: center; }
+  @media (min-width: 600px) {
+    .nyt-articles {
+      grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1000px) {
+    .nyt-articles {
+      grid-template-columns: 1fr 1fr 1fr; } }
 
 .news-article {
   height: 400px;
@@ -92,8 +117,10 @@ body {
     position: absolute;
     bottom: 0;
     padding: 10px;
+    font-size: 14px;
     background-color: rgba(0, 0, 0, 0.4);
-    color: white; }
+    color: white;
+    width: 100%; }
 
 h2 {
   font-family: "Open Sans,sans-serif";
@@ -111,29 +138,10 @@ footer {
     display: -webkit-box;
     display: flex; }
 
-@media (min-width: 600px) {
-  .nyt-header {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-            flex-direction: row;
-    -webkit-box-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-            align-items: center; }
-    .nyt-header .logo {
-      max-width: 120px; }
-    .nyt-header.is-active {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-              flex-direction: row; }
-      .nyt-header.is-active .logo {
-        max-width: 65px; } }
-
-.nyt-forms {
-  text-align: center;
-  -webkit-box-pack: center;
-          justify-content: center;
-  height: 5px; }
+@media (min-width: 1000px) {
+  footer {
+    -webkit-box-pack: start;
+            justify-content: flex-start; } }
 
 .ajax-loader {
   top: 10%; }
