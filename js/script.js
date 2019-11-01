@@ -37,9 +37,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         $.each(filteredResults, function(index, articleObject) {
           nytArticlesElem.append(`
-          <article class="news-article" style="background: url(${articleObject.multimedia[4].url}); background-size: cover;">
-            <p>${articleObject.abstract}</p>
-          </article>
+            <a href="${articleObject.url}" target="_blank">
+              <article class="news-article" style="background: url(${articleObject.multimedia[4].url}); background-size: cover;">
+                <p>${articleObject.abstract}</p>
+              </article>
+            </a>
         `);
         });
 
