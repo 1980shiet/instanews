@@ -34,7 +34,8 @@ body {
             flex-direction: column;
     -webkit-box-align: center;
             align-items: center;
-    margin: 0; }
+    margin: 0;
+    padding: 20px; }
     .nyt-header.is-active .logo {
       max-width: 150px; }
     .nyt-header.is-active .nyt-forms {
@@ -57,7 +58,7 @@ body {
               flex-direction: row;
       padding-top: 20px; }
       .nyt-header .logo {
-        max-width: 120px; }
+        max-width: 125px; }
       .nyt-header.is-active {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
@@ -123,7 +124,7 @@ body {
     width: 100%; }
 
 h2 {
-  font-family: "Open Sans,sans-serif";
+  font-family: "Open Sans Light";
   font-size: 16px; }
 
 footer {
