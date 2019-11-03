@@ -9,6 +9,7 @@ body {
   color: #ffffff;
   background-color: black;
   line-height: 1.5;
+  font-family: $font-family;
 }
 
 .screen-reader-text {
@@ -22,8 +23,6 @@ body {
 .nyt-header {
   display: flex;
   flex-direction: column;
-  // padding: 20px;
-  // margin: 75px;
   min-height: 90vh;
   justify-content: center;
   align-items: center;
@@ -101,12 +100,7 @@ select {
   width: 110px;
   border-color: black;
   border-style: solid;
-  font-size: 18px;
-  &.is-active {
-    width: 110px;
-    border-color: black;
-    border-style: solid;
-  }
+  font-size: $font-size;
 }
 
 .nyt-articles {
@@ -141,6 +135,7 @@ select {
 h2 {
   font-family: $font-family;
   font-size: $font-size;
+  padding-bottom: 5px;
 }
 
 footer {
@@ -159,20 +154,3 @@ footer {
     justify-content: flex-start;
   }
 }
-
-// @media (min-width: 600px) {
-//   .nyt-header {
-//     flex-direction: row;
-//     justify-content: center;
-//     align-items: center;
-//     .logo {
-//       max-width: 120px;
-//     }
-//     &.is-active {
-//       flex-direction: row;
-//       .logo {
-//         max-width: 65px;
-//       }
-//     }
-//   }
-// }

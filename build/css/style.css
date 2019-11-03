@@ -4,10 +4,11 @@
   box-sizing: border-box; }
 
 body {
-  font-family: "Open Sans Light Open Sans,sans-serif";
+  font-family: "OpenSans-Light";
   color: #ffffff;
   background-color: black;
-  line-height: 1.5; }
+  line-height: 1.5;
+  font-family: "OpenSans-Light"; }
 
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
@@ -105,11 +106,7 @@ select {
   width: 110px;
   border-color: black;
   border-style: solid;
-  font-size: 18px; }
-  select.is-active {
-    width: 110px;
-    border-color: black;
-    border-style: solid; }
+  font-size: 16px; }
 
 .nyt-articles {
   -webkit-box-pack: center;
@@ -137,8 +134,9 @@ select {
     width: 100%; }
 
 h2 {
-  font-family: "Open Sans Light Open Sans,sans-serif";
-  font-size: 16px; }
+  font-family: "OpenSans-Light";
+  font-size: 16px;
+  padding-bottom: 5px; }
 
 footer {
   color: #c2c2c2;
@@ -156,3 +154,10 @@ footer {
   footer {
     -webkit-box-pack: start;
             justify-content: flex-start; } }
+
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("../fonts/OpenSans-Bold.ttf");
+  src: url("../fonts/OpenSans-Bold.ttf") format("embedded-opentype"), url("../fonts/OpenSans-Bold.ttf") format("woff2"), url("../fonts/OpenSans-Bold.ttf") format("woff"), url("../fonts/OpenSans-Bold.ttf") format("truetype"), url("../fonts/OpenSans-Bold.ttf") format("svg");
+  font-weight: 300;
+  font-style: bold; }
