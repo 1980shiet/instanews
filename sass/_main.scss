@@ -76,14 +76,10 @@ body {
   width: 50px;
   display: none;
 }
-
 @include breakpoint($tablet-width) {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50px;
-  display: none;
+  .ajax-loader {
+    top: 10%;
+  }
 }
 
 .container {
@@ -130,7 +126,7 @@ body {
 }
 
 h2 {
-  font-family: "Open Sans Light";
+  font-family: "Open Sans Light Open Sans,sans-serif";
   font-size: 14px;
 }
 
