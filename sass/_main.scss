@@ -5,11 +5,13 @@
 }
 
 body {
-  font-family: $font-family;
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 16px;
   color: #ffffff;
   background-color: black;
   line-height: 1.5;
-  font-family: $font-family;
 }
 
 .screen-reader-text {
@@ -125,7 +127,9 @@ select {
     position: absolute;
     bottom: 0;
     padding: 10px;
-    font-size: $font-size;
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-style: normal;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     width: 100%;
@@ -133,8 +137,9 @@ select {
 }
 
 h2 {
-  font-family: $font-family;
-  font-size: $font-size;
+  font-family: "Open Sans";
+  font-weight: 200;
+  font-style: normal;
   padding-bottom: 5px;
 }
 
